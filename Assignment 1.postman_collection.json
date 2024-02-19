@@ -1,0 +1,859 @@
+{
+	"info": {
+		"_postman_id": "21f8d08a-541e-4f5e-8f05-0931e87c27eb",
+		"name": "Assignment 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32695647"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"check33gmail\",\r\n    \"password\":\"Abcd1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}auth/signUp",
+							"host": [
+								"{{localhost}}auth"
+							],
+							"path": [
+								"signUp"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"check4@gmail\",\r\n    \"password\":\"Abcd1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}auth/signUp",
+									"host": [
+										"{{localhost}}auth"
+									],
+									"path": [
+										"signUp"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-ol0v/1Nnu8fbi+SjeaUpsfOqrPg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 07:31:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"CREATED\",\n    \"user\": {\n        \"email\": \"check4@gmail\",\n        \"password\": \"$2b$04$SDKto6rsWUOmOlsfepz9Q.zDSRd5km9/TL2/zI6Q3DLOR0QiJ6H5C\",\n        \"_id\": \"65d303b9570754439743ddb0\",\n        \"createdAt\": \"2024-02-19T07:31:05.411Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"check2@gmail\",\r\n    \"password\":\"Abcd1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}auth/login",
+							"host": [
+								"{{localhost}}auth"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"check2@gmail\",\r\n    \"password\":\"Abcd1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}auth/login",
+									"host": [
+										"{{localhost}}auth"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f1-3FdGhAABmZ5U9b7U8ZdiH7QgII4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 07:30:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"LOGGED IN\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoZWNrMkBnbWFpbCIsImNyZWF0ZWRBdCI6IjIwMjQtMDItMTlUMDc6MzA6NDEuMzIzWiIsImlhdCI6MTcwODMyNzg0MSwiZXhwIjoxNzA4NDE0MjQxfQ.2c_5ZTESbNhl6iLO7qIHft1aojwRDKG48HHT-uBzEEQ\"\n}"
+						}
+					]
+				},
+				{
+					"name": "signup error message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"check2@gmail\",\r\n    \"password\": \"Abcde1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}auth/signUp",
+							"host": [
+								"{{localhost}}auth"
+							],
+							"path": [
+								"signUp"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signup error message",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"check2@gmail\",\r\n    \"password\": \"Abcde1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}auth/signUp",
+									"host": [
+										"{{localhost}}auth"
+									],
+									"path": [
+										"signUp"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15-OZvrddAa0OAwgt9S6D28fJ1yVK4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 07:18:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"USER EXISTS\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login error message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"check2gmail\",\r\n    \"password\":\"Abcd1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}auth/login",
+							"host": [
+								"{{localhost}}auth"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login error message",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"check2gmail\",\r\n    \"password\":\"Abcd1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}auth/login",
+									"host": [
+										"{{localhost}}auth"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18-gB1b2+vbgyPObemFO4Dys0Q8A/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 07:19:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"USER NOT FOUND\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "games",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoZWNrMkBnbWFpbCIsImNyZWF0ZWRBdCI6IjIwMjQtMDItMThUMDk6MDQ6MzUuMTgyWiIsImlhdCI6MTcwODI0NzA3NSwiZXhwIjoxNzA4MzMzNDc1fQ.ojPrS670alCuOs1ahh82z_tR7mrczaWcXE6eRcX_1Rs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"mario\",\r\n    \"year\":\"1970\",\r\n    \"email\":\"check2@gmail\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}games/createGame",
+							"host": [
+								"{{localhost}}games"
+							],
+							"path": [
+								"createGame"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"mario\",\r\n    \"year\":\"1970\",\r\n    \"email\":\"check2@gmail\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}games/createGame",
+									"host": [
+										"{{localhost}}games"
+									],
+									"path": [
+										"createGame"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "18"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12-OHjEiELENieWuWbLQQ8Getz/hBQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 07:31:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"game add\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoZWNrMkBnbWFpbCIsImNyZWF0ZWRBdCI6IjIwMjQtMDItMThUMDk6MDQ6MzUuMTgyWiIsImlhdCI6MTcwODI0NzA3NSwiZXhwIjoxNzA4MzMzNDc1fQ.ojPrS670alCuOs1ahh82z_tR7mrczaWcXE6eRcX_1Rs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"mario\",\r\n    \"year\": \"1880\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}games/updateYear",
+							"host": [
+								"{{localhost}}games"
+							],
+							"path": [
+								"updateYear"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"mario\",\r\n    \"year\": \"1880\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}games/updateYear",
+									"host": [
+										"{{localhost}}games"
+									],
+									"path": [
+										"updateYear"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16-4nRGv4wF4TLZgIMT/hcH4HMs3Qo\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 07:31:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Year updated\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoZWNrMkBnbWFpbCIsImNyZWF0ZWRBdCI6IjIwMjQtMDItMThUMDk6MDQ6MzUuMTgyWiIsImlhdCI6MTcwODI0NzA3NSwiZXhwIjoxNzA4MzMzNDc1fQ.ojPrS670alCuOs1ahh82z_tR7mrczaWcXE6eRcX_1Rs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"mario\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}games/getGames",
+							"host": [
+								"{{localhost}}games"
+							],
+							"path": [
+								"getGames"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"mario\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}games/getGames",
+									"host": [
+										"{{localhost}}games"
+									],
+									"path": [
+										"getGames"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "173"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ad-iEAObbwmEyuTvgGGWtPiO5YQQV4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 07:32:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Game found!\",\n    \"data\": {\n        \"_id\": \"65d303c7570754439743ddb3\",\n        \"name\": \"mario\",\n        \"year\": \"1880\",\n        \"user\": \"65d1c7fcaf70e6933434735d\",\n        \"createdAt\": \"2024-02-19T07:31:19.135Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get using populate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoZWNrMkBnbWFpbCIsImNyZWF0ZWRBdCI6IjIwMjQtMDItMThUMDk6MDQ6MzUuMTgyWiIsImlhdCI6MTcwODI0NzA3NSwiZXhwIjoxNzA4MzMzNDc1fQ.ojPrS670alCuOs1ahh82z_tR7mrczaWcXE6eRcX_1Rs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"mario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}games/getGamesUser",
+							"host": [
+								"{{localhost}}games"
+							],
+							"path": [
+								"getGamesUser"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get using populate",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"mario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}games/getGamesUser",
+									"host": [
+										"{{localhost}}games"
+									],
+									"path": [
+										"getGamesUser"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "325"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"145-hpvWz416duNPhLbPPW72RcS7P+A\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 07:33:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Game found!\",\n    \"data\": {\n        \"_id\": \"65d303c7570754439743ddb3\",\n        \"name\": \"mario\",\n        \"year\": \"1880\",\n        \"user\": {\n            \"_id\": \"65d1c7fcaf70e6933434735d\",\n            \"email\": \"check2@gmail\",\n            \"password\": \"$2b$04$N14QS8WACZ8ZdImqHztUTOk6pksnDYB9R2LKwTtuAt6lwxnFKo4ia\",\n            \"createdAt\": \"2024-02-18T09:03:57.006Z\",\n            \"__v\": 0\n        },\n        \"createdAt\": \"2024-02-19T07:31:19.135Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoZWNrMkBnbWFpbCIsImNyZWF0ZWRBdCI6IjIwMjQtMDItMThUMDk6MDQ6MzUuMTgyWiIsImlhdCI6MTcwODI0NzA3NSwiZXhwIjoxNzA4MzMzNDc1fQ.ojPrS670alCuOs1ahh82z_tR7mrczaWcXE6eRcX_1Rs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"mario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}games/deleteGame",
+							"host": [
+								"{{localhost}}games"
+							],
+							"path": [
+								"deleteGame"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"mario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}games/deleteGame",
+									"host": [
+										"{{localhost}}games"
+									],
+									"path": [
+										"deleteGame"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16-2XtiN1LnMJCxSfxgHdFSh4L3xaI\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 07:33:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Game deleted\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
